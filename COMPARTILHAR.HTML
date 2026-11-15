@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartilhe o Projeto - Transporte Acessível</title>
+    <link rel="stylesheet" href="./css/FEEDBACK.CSS">
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho cabecalho-ponta">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">COMPARTI<span>LHAR</span></h1>
+                <p>Divulgue o projeto Transporte Acessível</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-1">
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">PÁGINA INICIAL</a>
+            <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+            <a href="recarga.html">RECARGA</a>
+            <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+            <a href="MAPAS.HTML">MAPAS</a>
+            <a href="notificacoes.html">NOTÍCIAS</a>
+            <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+            <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+        </nav>
+    </div>
+
+    <main class="pagina-container">
+        <section class="card-branco card-divulgacao">
+            <h2 class="titulo-padrao">🔗 Gostou do site? Compartilhe!</h2>
+            <p class="subtitulo-padrao">Ajude outros estudantes e passageiros a encontrarem rotas acessíveis em São Paulo.</p>
+
+            <div class="box-copiar-link">
+                <input type="text" id="url-projeto" class="input-padrao input-link" value="https://movimentacity-sp.com.br" aria-label="Link do projeto" readonly>
+                <button type="button" class="btn-primario" onclick="copiarLinkProjeto()">Copiar Link</button>
+            </div>
+
+            <div class="botoes-sociais">
+                <button type="button" class="btn-verde" onclick="alert('Abrindo compartilhamento via WhatsApp...')">Enviar por WhatsApp</button>
+                <button type="button" class="btn-secundario" onclick="alert('QR Code do projeto exibido na tela!')">Mostrar QR Code</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        async function copiarLinkProjeto() {
+            const inputUrl = document.getElementById('url-projeto');
+
+            if (navigator.clipboard && window.isSecureContext) {
+                try {
+                    await navigator.clipboard.writeText(inputUrl.value);
+                    alert('Link copiado! Pronto para compartilhar.');
+                    return;
+                } catch (error) {
+                    inputUrl.focus();
+                    inputUrl.select();
+                    alert('Não foi possível copiar automaticamente. O link foi selecionado; copie-o manualmente.');
+                    return;
+                }
+            }
+
+            inputUrl.focus();
+            inputUrl.select();
+            alert('O link foi selecionado. Copie-o manualmente para compartilhar.');
+        }
+    </script>
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy; 2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

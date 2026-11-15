@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação e Feedback - Transporte Acessível</title>
+    <link rel="stylesheet" href="./css/FEEDBACK.CSS">
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho cabecalho-ponta">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">AVALIA<span>ÇÃO</span></h1>
+                <p>Central de avaliação de satisfação do usuário</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-1">
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">PÁGINA INICIAL</a>
+            <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+            <a href="recarga.html">RECARGA</a>
+            <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+            <a href="MAPAS.HTML">MAPAS</a>
+            <a href="notificacoes.html">NOTÍCIAS</a>
+            <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+            <a href="FEEDBACK.HTML#feedback-conteudo" aria-current="page">AVALIAÇÃO</a>
+        </nav>
+    </div>
+
+    <main id="feedback-conteudo" class="pagina-container">
+        <section class="card-branco">
+            <h2 class="titulo-padrao">⭐ Deixe sua Avaliação</h2>
+            <p class="subtitulo-padrao">Sua opinião é fundamental para medirmos a eficácia do nosso projeto acadêmico.</p>
+
+            <form onsubmit="event.preventDefault(); enviarFeedback();">
+                <div class="campo-form">
+                    <label for="nome-avaliador">Seu nome ou identificação</label>
+                    <input type="text" id="nome-avaliador" class="input-padrao" placeholder="Ex.: Carlos Silva" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="nota-avaliacao">De 0 a 10, qual nota você atribui à utilidade do site?</label>
+                    <div class="controle-nota">
+                        <input
+                            type="range"
+                            id="nota-avaliacao"
+                            min="0"
+                            max="10"
+                            value="9"
+                            class="input-padrao input-nota"
+                            oninput="document.getElementById('display-nota').textContent = this.value">
+                        <output id="display-nota" class="display-nota" for="nota-avaliacao" aria-live="polite">9</output>
+                    </div>
+                </div>
+
+                <div class="campo-form">
+                    <label for="texto-comentario">Comentário ou sugestão de melhoria</label>
+                    <textarea id="texto-comentario" rows="3" class="input-padrao" placeholder="O que você achou da navegação, dos mapas e da consulta de acessibilidade?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-verde">Enviar Avaliação</button>
+            </form>
+        </section>
+
+        <section class="card-branco" aria-labelledby="titulo-historico">
+            <h2 id="titulo-historico" class="titulo-padrao">💬 Histórico de Feedbacks Anteriores</h2>
+            <p class="subtitulo-padrao">Veja o que outros avaliadores e passageiros disseram sobre a plataforma.</p>
+
+            <div class="grid-feedbacks">
+                <article class="card-feedback-item">
+                    <div class="topo-feedback">
+                        <span class="nome-usuario">Mariana Souza</span>
+                        <span class="nota-badge">Nota 10/10</span>
+                    </div>
+                    <p class="comentario-texto">"Incrível a facilidade para consultar quais estações possuem elevadores operacionais."</p>
+                    <span class="data-feedback">Há 2 dias</span>
+                </article>
+
+                <article class="card-feedback-item">
+                    <div class="topo-feedback">
+                        <span class="nome-usuario">Lucas Oliveira</span>
+                        <span class="nota-badge">Nota 9/10</span>
+                    </div>
+                    <p class="comentario-texto">"O site tem um visual muito acessível além de ser extremamente bonito."</p>
+                    <span class="data-feedback">Há 4 dias</span>
+                </article>
+
+                <article class="card-feedback-item">
+                    <div class="topo-feedback">
+                        <span class="nome-usuario">César Cesário</span>
+                        <span class="nota-badge">Nota 5/10</span>
+                    </div>
+                    <p class="comentario-texto">"Não gostei muito do site."</p>
+                    <span class="data-feedback">Há 1 semana</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="atalho-divulgacao" aria-labelledby="titulo-compartilhar">
+            <h2 id="titulo-compartilhar" class="titulo-padrao">🔗 Gostou do site? Compartilhe!</h2>
+            <p class="subtitulo-padrao">Ajude outros estudantes e passageiros a encontrarem rotas acessíveis em São Paulo.</p>
+            <a class="btn-primario" href="COMPARTILHAR.HTML">Acessar página de compartilhamento</a>
+        </section>
+    </main>
+
+    <script>
+        function enviarFeedback() {
+            const nome = document.getElementById('nome-avaliador').value;
+            alert('Obrigado, ' + nome + '! O formulário foi enviado nesta demonstração; os dados não são armazenados.');
+            document.querySelector('form').reset();
+            document.getElementById('display-nota').textContent = '9';
+        }
+
+    </script>
+
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy; 2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

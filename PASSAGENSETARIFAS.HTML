@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentacity - Passagens e Tarifas</title>
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/PASSAGENS.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Titulozinho -->
+    <header class="cabecalho">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">PASSAGENS E TARI<span>FAS</span> </h1>
+                <p>Tabela de Tarifas, Integrações e Benefícios</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menuzinho de botões -->
+    <main class="main-1">
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">PÁGINA INICIAL</a>
+            <a href="PASSAGENSETARIFAS.HTML" aria-current="page">PASSAGENS</a>
+            <a href="recarga.html">RECARGA</a>
+            <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+            <a href="MAPAS.HTML">MAPAS</a>
+            <a href="notificacoes.html">NOTÍCIAS</a>
+            <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+            <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+        </nav>
+    </main>
+
+    <!-- Bloco Azul Principal de Conteúdo -->
+    <section class="bloco-principal">
+        
+        <div class="painel-informativo">
+            <h2>TABELA DE TARIFAS VIGENTES</h2>
+            <p class="subtitulo">Consulte os valores unitários e regras de integração do sistema:</p>
+
+            <!-- Tabela Estilizada -->
+            <div class="tabela-container">
+                <table class="tabela-tarifas">
+                    <thead>
+                        <tr>
+                            <th>Modal / Serviço</th>
+                            <th>Tipo de Bilhete</th>
+                            <th>Tempo de Integração</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ônibus Municipal</strong></td>
+                            <td>Comum / Unitário</td>
+                            <td>Até 3 horas (até 4 embarques)</td>
+                            <td><span class="preco">R$ 4,40</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Metrô / CPTM</strong></td>
+                            <td>Trilhos Unitário</td>
+                            <td>Válido para 1 viagem</td>
+                            <td><span class="preco">R$ 5,00</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Integração Ônibus + Trilhos</strong></td>
+                            <td>Bilhete Integrado</td>
+                            <td>3 horas de integração</td>
+                            <td><span class="preco">R$ 8,20</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estudante</strong></td>
+                            <td>Passe Escolar</td>
+                            <td>Cota mensal de estudos</td>
+                            <td><span class="preco destaque-verde">50% ou Gratuito</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Idoso / PCD</strong></td>
+                            <td>Especial Acessível</td>
+                            <td>Livre acesso regulamentado</td>
+                            <td><span class="preco destaque-verde">Gratuito (R$ 0,00)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Cards Brancos com Informações e Regras -->
+        <div class="grade-linhas" style="margin-top: 25px;">
+            <article id="recarga" class="card-linha">
+                <span class="tag-modal onibus">Recarga</span>
+                <h3>Como Recarregar</h3>
+                <p>Recarregue seu cartão pelo aplicativo oficial, terminais de autoatendimento ou postos autorizados via Pix e cartões.</p>
+            </article>
+
+            <article class="card-linha">
+                <span class="tag-modal metro">Regra de Integração</span>
+                <h3>Integração Inteligente</h3>
+                <p>O tempo de 3 horas passa a contar a partir da primeira validação na catraca do ônibus ou estação de trem/metrô.</p>
+            </article>
+
+            <article class="card-linha">
+                <span class="tag-modal onibus">Gratuidade</span>
+                <h3>Passe Livre e Isenções</h3>
+                <p>Idosos e pessoas com deficiência têm direito ao embarque sem tarifa mediante apresentação do documento ou cartão.</p>
+            </article>
+        </div>
+
+    </section>
+
+    <!-- Rodapé Cápsula Padronizado -->
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy;2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

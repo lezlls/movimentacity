@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajuda - Movimenta City</title>
+  <link rel="stylesheet" href="./css/AJUDA.CSS">
+  <link rel="stylesheet" href="./css/STYLE.CSS">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="cabecalho cabecalho-ponta">
+    <div class="titulo-cabecalho">
+      <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+      <div class="texto-cabecalho">
+        <h1 class="titulo-cabecalho-pagina">AJU<span>DA</span></h1>
+        <p>Suporte e informações para sua viagem</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-1">
+    <nav class="menu-principal" aria-label="Navegação principal">
+      <a href="index.html">PÁGINA INICIAL</a>
+      <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+      <a href="recarga.html">RECARGA</a>
+      <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+      <a href="MAPAS.HTML">MAPAS</a>
+      <a href="notificacoes.html">NOTÍCIAS</a>
+      <a href="AJUDA.HTML#ajuda-conteudo" aria-current="page">AJUDA</a>
+      <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+    </nav>
+  </div>
+
+<main id="ajuda-conteudo" class="container-ajuda">
+
+  <!-- Bloco 1: Perguntas Frequentes (FAQ Interativo sem JS) -->
+  <section class="secao-faq">
+    <div class="cabecalho-secao">
+      <h2>❓ Perguntas Frequentes (FAQ)</h2>
+      <p>Clique nas perguntas abaixo para visualizar as respostas rápidas sobre o sistema</p>
+    </div>
+
+    <div class="lista-perguntas">
+      <details class="item-faq" open>
+        <summary>Como funciona a integração tarifária entre ônibus e metrô?</summary>
+        <p>
+          Utilizando o Bilhete Único Comum, você pode realizar até 4 embarques (sendo no máximo 1 no metrô/trem e 3 em ônibus municipais) dentro de um período de 3 horas pagando uma tarifa integrada reduzida.
+        </p>
+      </details>
+
+      <details class="item-faq">
+        <summary>O que fazer se o elevador de uma estação estiver inoperante?</summary>
+        <p>
+          Procure imediatamente um agente de atendimento na linha de bloqueios (catracas) ou utilize os totens de intercomunicação nas plataformas. A equipe operacional acionará o protocolo de embarque assistido ou transporte alternativo gratuito até a próxima estação acessível.
+        </p>
+      </details>
+
+      <details class="item-faq">
+        <summary>Como solicitar o serviço porta a porta (Atende+)?</summary>
+        <p>
+          O serviço é destinado a pessoas com deficiência física severa. O cadastro deve ser realizado previamente junto aos postos autorizados da SPTrans com laudo médico atualizado, e os agendamentos são feitos pela Central 156.
+        </p>
+      </details>
+
+      <details class="item-faq">
+        <summary>Cães-guia podem embarcar em qualquer horário e linha?</summary>
+        <p>
+          Sim. Conforme a Lei Federal nº 11.126/2005, o ingresso e a permanência de cães-guia (inclusive em fase de treinamento) são garantidos em todos os veículos e estações, sem cobrança de tarifa adicional.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Bloco 2: Formulário de Reporte / Contato + Canais Rápidos -->
+  <section class="grid-suporte-inferior">
+    
+    <!-- Coluna Esquerda: Formulário Simulado -->
+    <div class="card-formulario">
+      <h3>📢 Relatar Problema ou Enviar Dúvida</h3>
+      <p>Encontrou alguma falha na infraestrutura ou precisa de suporte técnico?</p>
+
+      <form onsubmit="event.preventDefault(); alert('Relato enviado com sucesso! Protocolo #2026-SP gerado.');">
+        <div class="campo-form">
+          <label>Nome Completo</label>
+          <input type="text" placeholder="Digite seu nome..." required>
+        </div>
+
+        <div class="campo-form">
+          <label>Tipo de Ocorrência</label>
+          <select>
+            <option>Elevador ou Rampa Inoperante</option>
+            <option>Dúvida sobre Tarifas / Bilhete Único</option>
+            <option>Sugestão de Melhoria no Mapa</option>
+            <option>Outros Assuntos</option>
+          </select>
+        </div>
+
+        <div class="campo-form">
+          <label>Local / Linha e Descrição</label>
+          <textarea rows="3" placeholder="Ex: Elevador da plataforma sentido Itaquera na Estação Sé..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar-ajuda">Enviar Solicitação</button>
+      </form>
+    </div>
+
+    <!-- Coluna Direita: Canais de Emergência e Atendimento -->
+    <div class="coluna-canais">
+      <div class="card-canal destaque-verde">
+        <span class="tag-canal">24 HORAS • GRATUITO</span>
+        <h4>Central SPTrans / Prefeitura</h4>
+        <p class="numero-destaque">Telefone 156</p>
+        <p>Informações sobre itinerários, reclamações de linhas municipais e agendamento Atende+.</p>
+      </div>
+
+      <div class="card-canal destaque-azul">
+        <span class="tag-canal">METRÔ E TREM</span>
+        <h4>Central de Informações Metrô</h4>
+        <p class="numero-destaque">0800 770 7722</p>
+        <p>Suporte operacional em tempo real, achados e perdidos e assistência nas estações.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy; 2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

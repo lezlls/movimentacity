@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias e Alertas - Transporte Acessível</title>
+    <link rel="stylesheet" href="./css/noterecarga.css">
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho cabecalho-ponta">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">NOTÍ<span>CIAS</span></h1>
+                <p>Central de notícias, clima e avisos operacionais</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-1">
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">PÁGINA INICIAL</a>
+            <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+            <a href="recarga.html">RECARGA</a>
+            <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+            <a href="MAPAS.HTML">MAPAS</a>
+            <a href="notificacoes.html" aria-current="page">NOTÍCIAS</a>
+            <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+            <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+        </nav>
+    </div>
+
+    <main id="notificacoes-conteudo" class="container-notificacoes">
+        <section class="card-branco" aria-labelledby="titulo-noticias">
+            <h2 id="titulo-noticias" class="titulo-padrao">🔔 Mural de Notícias</h2>
+            <p class="subtitulo-padrao">Avisos ilustrativos; este mural não recebe atualizações em tempo real.</p>
+
+            <div class="lista-avisos">
+                <article class="card-aviso borda-clima">
+                    <div class="topo-aviso">
+                        <span class="tag-categoria cor-clima">🌦️ CLIMA E TEMPO • SÃO PAULO</span>
+                        <span class="data-aviso">18:45</span>
+                    </div>
+                    <h3>Previsão de pancadas de chuva na Zona Leste e Centro</h3>
+                    <p>Exemplo de aviso meteorológico para demonstrar a apresentação de condições climáticas e recomendações de trajeto.</p>
+                </article>
+
+                <article class="card-aviso borda-rota">
+                    <div class="topo-aviso">
+                        <span class="tag-categoria cor-rota">🚧 AVISO DE ROTA • ÔNIBUS MUNICIPAL</span>
+                        <span class="data-aviso">14:20</span>
+                    </div>
+                    <h3>Desvio temporário na linha 204 - Circular Universitário (UNICID)</h3>
+                    <p>Exemplo de aviso de desvio por obras, com orientação sobre alteração de ponto de embarque e acessibilidade.</p>
+                </article>
+
+                <article class="card-aviso borda-sistema">
+                    <div class="topo-aviso">
+                        <span class="tag-categoria cor-sistema">✅ ATUALIZAÇÃO DO SISTEMA</span>
+                    </div>
+                    <h3>Novos pontos de conexão adicionados na aba Mapas</h3>
+                    <p>Exemplo de comunicado sobre novas informações de conexão nas estações Sé, Brás, Luz e Terminal Parque Dom Pedro II.</p>
+                </article>
+
+                <article class="card-aviso borda-alerta">
+                    <div class="topo-aviso">
+                        <span class="tag-categoria cor-alerta">♿ MANUTENÇÃO • ACESSIBILIDADE</span>
+                    </div>
+                    <h3>Elevador Norte da Estação Brás em manutenção programada</h3>
+                    <p>Exemplo de aviso de manutenção, com orientação para que passageiros procurem a equipe da estação.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy; 2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

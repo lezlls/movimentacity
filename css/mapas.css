@@ -1,0 +1,221 @@
+.secao-mapa {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1040px;
+    margin: 28px auto 40px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: rgb(30, 58, 138);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cabecalho-mapa {
+    margin-bottom: 20px;
+    padding: 22px 24px;
+    border-left: 5px solid #5af794;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.12);
+    text-align: left;
+}
+
+.rotulo-mapa {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #5af794;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.cabecalho-mapa h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 1000;
+    line-height: 1.25;
+}
+
+.cabecalho-mapa p {
+    max-width: 760px;
+    margin: 0;
+    color: #e0f2fe;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.container-mapa-duplo {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.7fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.painel-rotas {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    text-align: left;
+}
+
+.painel-rotas h3 {
+    margin: 0 0 2px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.lista-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-conexao {
+    padding: 1.5rem;
+    border-left: 4px solid #10b981;
+    border-radius: 6px;
+    background-color: #e4e9fa;
+    color: #15285c;
+}
+
+.topo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.topo-card strong {
+    min-width: 0;
+    color: #1e3a8a;
+    font-size: 1.17rem;
+    font-weight: 600;
+    
+}
+
+.card-conexao p {
+    margin: 0;
+    color: #526078;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.badge-linha-vermelha,
+.badge-terminal,
+.badge-cptm,
+.badge-amarela {
+    flex-shrink: 0;
+    padding: 3px 7px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.badge-linha-vermelha {
+    background-color: #ef4444;
+}
+
+.badge-terminal {
+    background-color: #0284c7;
+}
+
+.badge-cptm {
+    background-color: #6366f1;
+}
+
+.badge-amarela {
+    padding: 3px 7px;
+    border-radius: 5px;
+    background-color: #eab308;
+    color: #15285c;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.info-operacao {
+    padding: 12px;
+    border-top: 2px solid #10b981;
+    border-radius: 8px;
+    background-color: rgba(30, 58, 138, 0.85);
+    font-size: 1rem;
+}
+
+.info-operacao strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #10b981;
+    font-size: 1.5rem;
+}
+
+.info-operacao p {
+    margin: 2px 0;
+    color: #e0e7ff;
+    line-height: 1.5;
+}
+
+.area-iframe {
+    display: flex;
+    min-width: 0;
+}
+
+.mapa-simples {
+    display: block;
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    border: 0;
+    border-radius: 14px;
+    background-color: #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 760px) {
+    .secao-mapa {
+        padding: 22px;
+    }
+
+    .cabecalho-mapa h2 {
+        font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    }
+
+    .container-mapa-duplo {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mapa-simples {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao-mapa {
+        margin: 20px auto 40px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .cabecalho-mapa {
+        padding: 18px;
+    }
+
+    .mapa-simples {
+        min-height: 340px;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas</title>
+    <link rel="stylesheet" href="./css/mapas.css">
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho cabecalho-ponta">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">MA<span>PAS</span></h1>
+                <p>Informações sobre localização</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-1">
+           <nav class="menu-principal" aria-label="Navegação principal">
+                <a href="index.html">PÁGINA INICIAL</a>
+                <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+                <a href="recarga.html">RECARGA</a>
+                <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+                <a href="MAPAS.HTML" aria-current="page">MAPAS</a>
+                <a href="notificacoes.html">NOTÍCIAS</a>
+                <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+                <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+            </nav>
+        </div>
+
+        <section id="mapas" class="secao-mapa" aria-labelledby="titulo-mapa">
+            <header class="cabecalho-mapa">
+                <span class="rotulo-mapa">Mobilidade urbana</span>
+                <h2 id="titulo-mapa">Rede de transporte e acessibilidade em São Paulo</h2>
+                <p>Consulte terminais integrados, corredores expressos e pontos com 100% de acessibilidade.</p>
+            </header>
+
+            <div class="container-mapa-duplo">
+                <aside class="painel-rotas" aria-labelledby="titulo-conexoes">
+                    <h3 id="titulo-conexoes">Principais conexões</h3>
+
+                    <div class="lista-cards">
+                        <article class="card-conexao">
+                            <div class="topo-card">
+                                <strong>Estação Sé</strong>
+                                <span class="badge-linha-vermelha">L1 • L3</span>
+                            </div>
+                            <p>Baldeação entre as linhas 1-Azul e 3-Vermelha.</p>
+                        </article>
+
+                        <article class="card-conexao">
+                            <div class="topo-card">
+                                <strong>Terminal Parque Dom Pedro II</strong>
+                                <span class="badge-terminal">Terminal</span>
+                            </div>
+                            <p>Ponto inicial do Corredor Expresso Tiradentes.</p>
+                        </article>
+
+                        <article class="card-conexao">
+                            <div class="topo-card">
+                                <strong>Estação Brás</strong>
+                                <span class="badge-cptm">Metrô • Trem</span>
+                            </div>
+                            <p>Integração com as linhas 10, 11 e 12 da CPTM.</p>
+                        </article>
+
+                        <article class="card-conexao">
+                            <div class="topo-card">
+                                <strong>Estação Luz</strong>
+                                <span class="badge-amarela">L1 • L4 • Trem</span>
+                            </div>
+                            <p>Conexão com Linha 4-Amarela e Expresso Aeroporto.</p>
+                        </article>
+                    </div>
+
+                    <div class="info-operacao">
+                        <strong>🕒 Horário da Rede</strong>
+                        <p>Metrô e CPTM: 04h40 às 00h00</p>
+                        <p>Corredores Expressos: 24 horas</p>
+                    </div>
+                </aside>
+
+                <div class="area-iframe">
+                    <iframe
+                        class="mapa-simples"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29260.41506458732!2d-46.6388231!3d-23.5489433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                        title="Mapa de transporte e acessibilidade em São Paulo"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy; 2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

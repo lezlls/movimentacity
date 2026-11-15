@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recarga de Créditos - Transporte Acessível</title>
+    <link rel="stylesheet" href="./css/noterecarga.css">
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho cabecalho-ponta">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">RECAR<span>GA</span></h1>
+                <p>Recarga digital de créditos • Bilhete Único SP</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-1">
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">PÁGINA INICIAL</a>
+            <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+            <a href="recarga.html" aria-current="page">RECARGA</a>
+            <a href="COMOVIAJAR.HTML">ACESSIBILIDADE</a>
+            <a href="MAPAS.HTML">MAPAS</a>
+            <a href="notificacoes.html">NOTÍCIAS</a>
+            <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+            <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+        </nav>
+    </div>
+
+    <main id="recarga-conteudo" class="container-recarga">
+        <section class="card-branco card-recarga">
+            <h2 class="titulo-padrao">⚡ Recarregar Bilhete</h2>
+            <p class="subtitulo-padrao">Simulação demonstrativa; nenhum pagamento real é processado. Valor mínimo: R$ 2,65.</p>
+
+            <form id="form-recarga" onsubmit="event.preventDefault(); processarRecarga();">
+                <div class="campo-form">
+                    <label for="num-cartao">Número do Cartão (Bilhete Único)</label>
+                    <input type="text" id="num-cartao" class="input-padrao" placeholder="Ex.: 1109.8832.4410-9" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="valor-recarga">Valor da Recarga (R$)</label>
+                    <input type="number" id="valor-recarga" class="input-padrao" step="0.05" min="2.65" value="10.60" required>
+                    <div class="atalhos-valores" aria-label="Valores rápidos">
+                        <button type="button" class="btn-atalho" onclick="definirValor(2.65)">R$ 2,65 (Estudante)</button>
+                        <button type="button" class="btn-atalho" onclick="definirValor(5.30)">R$ 5,30 (1 viagem)</button>
+                        <button type="button" class="btn-atalho" onclick="definirValor(20.00)">R$ 20,00</button>
+                        <button type="button" class="btn-atalho" onclick="definirValor(50.00)">R$ 50,00</button>
+                    </div>
+                </div>
+
+                <div class="campo-form">
+                    <label for="metodo-pgto">Forma de Pagamento</label>
+                    <select id="metodo-pgto" class="input-padrao">
+                        <option value="Pix (Liberação Imediata)">Pix (Liberação Imediata)</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
+                        <option value="Cartão de Débito">Cartão de Débito</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-verde">Simular Recarga</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function definirValor(valor) {
+            document.getElementById('valor-recarga').value = valor.toFixed(2);
+        }
+
+        function processarRecarga() {
+            const valor = Number.parseFloat(document.getElementById('valor-recarga').value);
+            const cartao = document.getElementById('num-cartao').value.trim();
+            const metodo = document.getElementById('metodo-pgto').value;
+
+            if (!Number.isFinite(valor) || valor < 2.65) {
+                alert('O valor mínimo para recarga é de R$ 2,65.');
+                return;
+            }
+
+            alert(
+                'Simulação de recarga de R$ ' + valor.toFixed(2).replace('.', ',') +
+                ' para o cartão ' + cartao + ' via ' + metodo +
+                '. Nenhum pagamento foi realizado.'
+            );
+        }
+    </script>
+
+    <footer>
+        <div>
+            <h4>MOVIMENTACITY</h4>
+            <p>GESTÃO INTELIGENTE</p>
+            <p>&copy; 2026 - MOVIMENTACITY - TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

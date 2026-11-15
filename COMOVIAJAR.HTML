@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte Acessível - Movimenta City</title>
+    <link rel="stylesheet" href="./css/stylebutton1.css">
+    <link rel="stylesheet" href="./css/STYLE.CSS">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho cabecalho-ponta">
+        <div class="titulo-cabecalho">
+            <img class="icone-onibus" src="./images/onibus.svg" alt="Símbolo de ônibus">
+            <div class="texto-cabecalho">
+                <h1 class="titulo-cabecalho-pagina">TRANSPORTE ACES<span>SÍVEL</span></h1>
+                <p>Informações de acessibilidade, linhas adaptadas e suporte ao passageiro</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-1">
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a href="index.html">PÁGINA INICIAL</a>
+            <a href="PASSAGENSETARIFAS.HTML">PASSAGENS</a>
+            <a href="recarga.html">RECARGA</a>
+            <a href="COMOVIAJAR.HTML" aria-current="page">ACESSIBILIDADE</a>
+            <a href="MAPAS.HTML">MAPAS</a>
+            <a href="notificacoes.html">NOTÍCIAS</a>
+            <a href="AJUDA.HTML#ajuda-conteudo">AJUDA</a>
+            <a href="FEEDBACK.HTML#feedback-conteudo">AVALIAÇÃO</a>
+        </nav>
+    </div>
+
+    <main id="conteudo-acessibilidade" class="conteudo-acessibilidade">
+        <section class="secao-apresentacao" aria-labelledby="titulo-apresentacao">
+            <div class="titulo-com-simbolo">
+                <span class="icone-titulo" aria-hidden="true">♿</span>
+                <h2 id="titulo-apresentacao">Acessibilidade no transporte público</h2>
+            </div>
+
+            <div class="bloco-texto-institucional">
+                <p>
+                    A acessibilidade no sistema de transporte público de São Paulo constitui um pilar fundamental para a efetivação da cidadania, da autonomia e do direito de ir e vir de toda a população, com especial atenção às pessoas com deficiência (PCD) e mobilidade reduzida. Este módulo do projeto <strong>Transporte Acessível</strong> foi desenvolvido para centralizar, de forma transparente e intuitiva, as informações vitais sobre a infraestrutura adaptada da rede de transporte urbano.
+                </p>
+                <p>
+                    Nossa plataforma monitora e cataloga as diretrizes operacionais de frotas e estações, assegurando que recursos indispensáveis — como elevadores automáticos, plataformas niveladas, pisos táteis, avisos sonoros e assentos preferenciais — estejam em conformidade com as normas de acessibilidade universal. O objetivo é mitigar barreiras arquitetônicas e promover uma integração eficiente, segura e democrática para todos os passageiros.
+                </p>
+            </div>
+        </section>
+
+        <section id="linhas-acessiveis" class="container-explicativo" aria-labelledby="titulo-pilares">
+            <div class="titulo-secao">
+                <h2 id="titulo-pilares">O que torna o transporte acessível?</h2>
+                <p>Conheça recursos que contribuem para uma viagem mais autônoma e inclusiva.</p>
+            </div>
+
+            <div class="grid-pilares">
+                <article class="card-pilar">
+                    <span class="icone-pilar" aria-hidden="true">🏗️</span>
+                    <h3>Infraestrutura física</h3>
+                    <p>
+                        Rampas, corrimãos, elevadores, plataformas niveladas e espaços adequados facilitam o acesso às estações, aos terminais e aos veículos.
+                    </p>
+                </article>
+
+                <article class="card-pilar">
+                    <span class="icone-pilar" aria-hidden="true">👁️</span>
+                    <h3>Sinalização acessível</h3>
+                    <p>
+                        Pisos táteis, informações em Braille, avisos sonoros e indicadores visuais apoiam passageiros com diferentes necessidades sensoriais.
+                    </p>
+                </article>
+
+                <article class="card-pilar">
+                    <span class="icone-pilar" aria-hidden="true">🤝</span>
+                    <h3>Atendimento inclusivo</h3>
+                    <p>
+                        Equipes preparadas podem apoiar o embarque e o desembarque, respeitando a autonomia de cada passageiro e as orientações para cães-guia.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="apoio-acessibilidade" class="bloco-ajuda-acessibilidade" aria-labelledby="titulo-ajuda">
+            <div class="ajuda-titulo">
+                <h2 id="titulo-ajuda">Precisa de ajuda?</h2>
+                <p>Para informações sobre o serviço Atende+ ou para comunicar um elevador inoperante, entre em contato:</p>
+            </div>
+            <div class="grid-contatos">
+                <div class="card-contato">
+                    <strong>Central de Atendimento</strong>
+                    <a href="tel:156">Telefone: 156 (ligação gratuita)</a>
+                </div>
+                <div class="card-contato">
+                    <strong>Ouvidoria de Mobilidade</strong>
+                    <span>Atendimento prioritário para pessoas com deficiência</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>MOVIMENTACITY</strong> - GESTÃO INTELIGENTE</p>
+        <p>&copy; 2026 - MovimentaCity - Todos os direitos reservados</p>
+    </footer>
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>

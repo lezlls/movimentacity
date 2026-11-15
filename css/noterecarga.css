@@ -1,0 +1,244 @@
+body {
+    min-height: 100vh;
+    margin: 8px;
+    padding: 0;
+    color: #1e293b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-branco {
+    box-sizing: border-box;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-recarga {
+    background-color: #e4e9fa;
+}
+
+.titulo-padrao {
+    margin: 0 0 6px;
+    color: #1e3a8a;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.subtitulo-padrao {
+    margin: 0 0 22px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container-recarga {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.campo-form {
+    margin-bottom: 18px;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-padrao {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-padrao:focus-visible {
+    border-color: #1e3a8a;
+    outline: 2px solid rgba(30, 58, 138, 0.2);
+    outline-offset: 1px;
+}
+
+.atalhos-valores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-atalho {
+    padding: 6px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    color: #1e3a8a;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-atalho:hover {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+.btn-atalho:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+}
+
+.btn-verde {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #10b981;
+    color: #ffffff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-verde:hover {
+    background-color: #059669;
+}
+
+.container-notificacoes {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.container-notificacoes .card-branco {
+    background-color: #e4e9fa;
+}
+
+.lista-avisos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-aviso {
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+.card-aviso:hover {
+    transform: translateY(-2px);
+}
+
+.borda-clima {
+    border-left: 5px solid #0284c7;
+}
+
+.borda-sistema {
+    border-left: 5px solid #10b981;
+}
+
+.borda-rota {
+    border-left: 5px solid #eab308;
+}
+
+.borda-alerta {
+    border-left: 5px solid #ef4444;
+}
+
+.topo-aviso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.tag-categoria {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.cor-clima {
+    color: #0284c7;
+}
+
+.cor-rota {
+    color: #b45309;
+}
+
+.cor-sistema {
+    color: #059669;
+}
+
+.cor-alerta {
+    color: #dc2626;
+}
+
+.data-aviso {
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.card-aviso h3 {
+    margin: 0 0 8px;
+    color: #0f172a;
+    font-size: 16px;
+}
+
+.card-aviso p {
+    margin: 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .container-recarga,
+    .container-notificacoes {
+        padding: 0 14px;
+    }
+
+    .card-branco {
+        padding: 22px;
+    }
+
+    .topo-aviso {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-atalho,
+    .btn-verde,
+    .card-aviso {
+        transition: none;
+    }
+
+    .card-aviso:hover {
+        transform: none;
+    }
+}
