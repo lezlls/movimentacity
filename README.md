@@ -51,9 +51,9 @@ O **MovimentaCity** conecta os cidadãos aos serviços de transporte da cidade d
 
 ## 👥 Equipe e Autores
 
-- **Lethícia** — [GitHub] (https:/lezlls/github.com)
-- **Erika** — [GitHub] (https:/anacsantos-tech/github.com)
-- **Ana** — [GitHub] (https:/erikasilva23/github.com)
+- **Lethícia** — [GitHub] ( https://github.com/lezlls )
+- **Erika** — [GitHub] ( https://github.com/anacsantos-tech )
+- **Ana** — [GitHub] ( https://github.com/erikasilva23 )
 
 ---
 
